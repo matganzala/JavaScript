@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+
+    <script>
+        /*
+            Celsius em Fahrenheit
+
+            Crie uma função que receba uma string em celsius ou fahrenheit e faça 
+            a transformação de uma unidade para outra
+
+            C = (F - 32) * 5/9
+            F = C * 9/5 + 32
+        */
+
+        //transformDegree('50F')
+        function transformDegree(degree) {
+            //ToUpperCase para usar caractere com letra minúscula
+            const CelsiusExist = degree.ToUpperCase().includes('C')
+            const fahrenheitExist = degree.ToUpperCase().includes('F')
+
+            //! operador de "não existe"
+            if(!CelsiusExist && !fahrenheitExist) {
+                throw new error("Grau não identificado")
+            }
+        }
+
+        try {
+            transformDegree('50F')
+            transformDegree('50Z')
+            
+        } catch (error) {
+            console.log(error.message)
+        }       
+
+
+    </script>
+</body>
+</html>

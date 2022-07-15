@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>    
+    <script>
+        /*
+        Sistema de gastos familiar
+
+        crie um objeto que possuirá 2 propriedades, ambas do tipo
+        array:
+
+            * receitas: []
+            * despesas: []
+        Agora, crie uma função que erá calcular o total de receitas e despesas e irá mostrar uma mensagem 
+        se a familia está com saldo positivo ou negativo, seguido do valor do saldo
+        */
+
+        var finFamilia = {//Objeto com 2 arrays
+            receita: [],
+            despesas: [],
+        }
+
+        receita = "2500"
+        despesas = "2500"
+
+        function calcTotal (){     
+            var valSaldo = receita - despesas;
+            var tipoSaldo;
+            
+            if (receita > despesas){
+                tipoSaldo = "Positivo"
+            }else if (receita < despesas){
+                tipoSaldo = "Negativo"
+            }else {
+                tipoSaldo = "Ta no azul !"
+            }    
+
+            return console.log("O saldo da familia é: " + tipoSaldo + "\n E seu valor é de: R$" + valSaldo)        
+
+        }
+
+        console.log(calcTotal())
+
+    </script>    
+</body>
+</html>

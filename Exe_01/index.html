@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Exercício 1</title>
+</head>
+<body>    
+    <script>
+        /*Transformar notas escolares
+
+        Crie um algoritmo que transforme as notas do sistema numérico em,
+        sistema de notas em caracteres tipo A, B, C
+
+        * de 90 para cima - A
+        * 80 - 89 - B
+        * 70 - 79 - C
+        * 60 - 69 - D
+        * menor que 60 - F */
+
+        var score = prompt("Digite a nota do aluno: ")
+        var scoreA = score >= 90 && score <= 100
+        var scoreB = score >= 80 && score <= 89
+        var scoreC = score >= 70 && score <= 79
+        var scoreD = score >= 60 && score <= 69
+        var scoreF = score < 60 && score >= 0
+        var scoreFinal
+
+        if(scoreA) {
+            scoreFinal = "A"
+            console.log(scoreFinal)
+        }else if(scoreB) {
+            scoreFinal = "B"
+            console.log(scoreFinal)
+        }else if(scoreC) {
+            scoreFinal = "C"
+            console.log(scoreFinal)
+        }else if(scoreD) {
+            scoreFinal = "D"
+            console.log(scoreFinal)
+        }else if(scoreF) {
+            scoreFinal = "F"
+            console.log(scoreFinal)
+        }else{
+            scoreFinal = "Nota inválida"
+        }
+
+        console.log(scoreFinal)
+            
+    </script>
+</body>
+</html>
